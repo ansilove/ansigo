@@ -145,12 +145,12 @@ func main() {
 
 				// Cursor Backward
 				if ansiSequenceCharacter == 'D' {
-					value, _ := strconv.Atoi(string(ansiSequence))
-					if value == 0 {
-						value++
+					valueX, _ := strconv.Atoi(string(ansiSequence))
+					if valueX == 0 {
+						valueX++
 					}
 
-					ansi.positionX = ansi.positionX - value
+					ansi.positionX = ansi.positionX - valueX
 					if ansi.positionX < 0 {
 						ansi.positionX = 0
 					}
