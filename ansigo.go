@@ -229,6 +229,13 @@ func main() {
 					break
 				}
 
+				// Skipping Set Mode And Reset Mode Sequences
+				if ansiSequenceCharacter == 'h' || ansiSequenceCharacter == 'l' {
+
+					i += j + 2
+					break
+				}
+
 				ansiSequence = append(ansiSequence, ansiSequenceCharacter)
 			}
 		} else {
