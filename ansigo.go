@@ -1,8 +1,8 @@
-// AnsiGo 1.00 (c) by Frederic Cambus 2012
+// AnsiGo 1.00 (c) by Frederic Cambus 2012-2013
 // http://www.github.com/fcambus/ansigo
 //
 // Created:      2012/02/14
-// Last Updated: 2012/02/19
+// Last Updated: 2013/05/11
 //
 // AnsiGo is released under the MIT license.
 // See LICENSE file for details.
@@ -21,7 +21,7 @@ import (
 
 func main() {
 
-	fmt.Println("-------------------------------------------------------------------------------\n                    AnsiGo 1.00 (c) by Frederic CAMBUS 2012\n-------------------------------------------------------------------------------\n")
+	fmt.Println("-------------------------------------------------------------------------------\n                  AnsiGo 1.00 (c) by Frederic CAMBUS 2012-2013\n-------------------------------------------------------------------------------\n")
 
 	// Check input parameters and show usage
 	if len(os.Args) != 2 {
