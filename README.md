@@ -21,6 +21,10 @@ Build and install with the `go` tool :
 	go build ansigo
 	go install ansigo
 
+Alternatively, you can download pre-built binaries (32-bit or 64-bit), check
+the directory corresponding to your operating system. Currently, only Windows
+binaries are available.
+
 ## License
 
 AnsiGo is released under the MIT license. See `LICENSE` file for details.
