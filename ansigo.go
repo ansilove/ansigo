@@ -84,11 +84,12 @@ func main() {
 		if ansi.character == '\x1b' && data[i+1] == '[' {
 			ansiSequence := []byte{}
 
+		sequence:
 			for j := 0; j < 12; j++ {
 				ansiSequenceCharacter := data[i+2+j]
 
-				// Cursor Position
-				if ansiSequenceCharacter == 'H' || ansiSequenceCharacter == 'f' {
+				switch ansiSequenceCharacter {
+				case 'H', 'f': // Cursor Position
 					ansiSequenceValues := strings.SplitN(string(ansiSequence), ";", -1)
 
 					valueY, _ := strconv.Atoi(ansiSequenceValues[0])
@@ -98,11 +99,9 @@ func main() {
 					ansi.positionX = valueX - 1
 
 					i += j + 2
-					break
-				}
+					break sequence
 
-				// Cursor Up
-				if ansiSequenceCharacter == 'A' {
+				case 'A': // Cursor Up
 					valueY, _ := strconv.Atoi(string(ansiSequence))
 					if valueY == 0 {
 						valueY++
@@ -111,11 +110,9 @@ func main() {
 					ansi.positionY = ansi.positionY - valueY
 
 					i += j + 2
-					break
-				}
+					break sequence
 
-				// Cursor Down
-				if ansiSequenceCharacter == 'B' {
+				case 'B': // Cursor Down
 					valueY, _ := strconv.Atoi(string(ansiSequence))
 					if valueY == 0 {
 						valueY++
@@ -124,11 +121,9 @@ func main() {
 					ansi.positionY = ansi.positionY + valueY
 
 					i += j + 2
-					break
-				}
+					break sequence
 
-				// Cursor Forward
-				if ansiSequenceCharacter == 'C' {
+				case 'C': // Cursor Forward
 					valueX, _ := strconv.Atoi(string(ansiSequence))
 					if valueX == 0 {
 						valueX++
@@ -140,11 +135,9 @@ func main() {
 					}
 
 					i += j + 2
-					break
-				}
+					break sequence
 
-				// Cursor Backward
-				if ansiSequenceCharacter == 'D' {
+				case 'D': // Cursor Backward
 					valueX, _ := strconv.Atoi(string(ansiSequence))
 					if valueX == 0 {
 						valueX++
@@ -156,34 +149,28 @@ func main() {
 					}
 
 					i += j + 2
-					break
-				}
+					break sequence
 
-				// Save Cursor Position
-				if ansiSequenceCharacter == 's' {
+				case 's': // Save Cursor Position
 					ansi.savedPositionY = ansi.positionY
 					ansi.savedPositionX = ansi.positionX
 
 					i += j + 2
-					break
-				}
+					break sequence
 
-				// Restore Cursor Position
-				if ansiSequenceCharacter == 'u' {
+				case 'u': // Restore Cursor Position
 					ansi.positionY = ansi.savedPositionY
 					ansi.positionX = ansi.savedPositionX
 
 					i += j + 2
-					break
-				}
+					break sequence
 
-				// Erase Display
-				if ansiSequenceCharacter == 'J' {
+				case 'J': // Erase Display
 					value, _ := strconv.Atoi(string(ansiSequence))
 
 					if value == 2 {
 						ansi.buffer = nil
-	
+
 						ansi.positionX = 0
 						ansi.positionY = 0
 						ansi.sizeX = 0
@@ -191,11 +178,9 @@ func main() {
 					}
 
 					i += j + 2
-					break
-				}
+					break sequence
 
-				// Set Graphic Rendition
-				if ansiSequenceCharacter == 'm' {
+				case 'm': // Set Graphic Rendition
 					ansiSequenceValues := strings.SplitN(string(ansiSequence), ";", -1)
 
 					for j := 0; j < len(ansiSequenceValues); j++ {
@@ -226,14 +211,11 @@ func main() {
 					}
 
 					i += j + 2
-					break
-				}
+					break sequence
 
-				// Skipping Set Mode And Reset Mode Sequences
-				if ansiSequenceCharacter == 'h' || ansiSequenceCharacter == 'l' {
-
+				case 'h', 'l': // Skipping Set Mode And Reset Mode Sequences
 					i += j + 2
-					break
+					break sequence
 				}
 
 				ansiSequence = append(ansiSequence, ansiSequenceCharacter)
