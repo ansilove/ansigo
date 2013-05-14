@@ -29,7 +29,14 @@ binaries are available.
 
 AnsiGo is released under the MIT license. See `LICENSE` file for details.
 
-## Contact
+## Author
+
+AnsiGo is developed by Frederic Cambus
+
+Site : http://www.cambus.net
+Twitter: http://twitter.com/fcambus
+
+## Resources
 
 Project Homepage : https://github.com/fcambus/ansigo
 
