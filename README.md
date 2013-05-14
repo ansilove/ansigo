@@ -38,6 +38,6 @@ AnsiGo is developed by Frederic Cambus
 
 ## Resources
 
-Project Homepage : https://github.com/fcambus/ansigo
+Project Homepage : http://fcambus.github.io/ansigo/
 
 Sister project : http://www.ascii-codes.com
