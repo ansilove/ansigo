@@ -25,6 +25,19 @@ Alternatively, you can download pre-built binaries (32-bit or 64-bit), check
 the directory corresponding to your operating system. Currently, only Windows
 binaries are available.
 
+## Cross-compiling AnsiGo binaries for Windows
+
+Building Go for the required platform :
+
+	cd /usr/local/go/
+	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 ./make.bash
+	CGO_ENABLED=0 GOOS=windows GOARCH=amd64 ./make.bash
+
+Building Windows binaries :
+
+	CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -o windows/amd64/ansigo.exe ansigo
+	CGO_ENABLED=0 GOOS=windows GOARCH=386 go build -o windows/i386/ansigo.exe ansigo
+
 ## License
 
 AnsiGo is released under the MIT license. See `LICENSE` file for details.
