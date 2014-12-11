@@ -40,7 +40,7 @@ Building Windows binaries :
 
 ## License
 
-AnsiGo is released under the MIT license. See `LICENSE` file for details.
+AnsiGo is released under the BSD 3-Clause license. See `LICENSE` file for details.
 
 ## Author
 
