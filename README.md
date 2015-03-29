@@ -21,17 +21,26 @@ Build and install with the `go` tool :
 	go build ansigo
 	go install ansigo
 
-Alternatively, you can download pre-built binaries (32-bit or 64-bit), check
-the directory corresponding to your operating system. Currently, only Windows
-binaries are available.
+Alternatively, you can easily cross-compile binaries for other systems. See the `Cross-compiling AnsiGo binaries` section for instructions.
 
-## Cross-compiling AnsiGo binaries for Windows
+## Usage
+
+AnsiGo takes the input file as parameter :
+	
+	ansigo inputfile
+
+## Cross-compiling AnsiGo binaries
 
 Building Go for the required platform :
 
 	cd /usr/local/go/
 	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 ./make.bash
 	CGO_ENABLED=0 GOOS=windows GOARCH=amd64 ./make.bash
+
+Building Linux binaries :
+
+	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o linux/amd64/ansigo ansigo
+	CGO_ENABLED=0 GOOS=linux GOARCH=386 go build -o linux/i386/ansigo ansigo
 
 Building Windows binaries :
 
