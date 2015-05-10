@@ -1,8 +1,8 @@
-// AnsiGo 1.00 (c) by Frederic Cambus 2012-2015
+// AnsiGo 1.01 (c) by Frederic Cambus 2012-2015
 // http://www.github.com/fcambus/ansigo
 //
 // Created:      2012/02/14
-// Last Updated: 2015/03/29
+// Last Updated: 2015/05/10
 //
 // AnsiGo is released under the BSD 3-Clause license.
 // See LICENSE file for details.

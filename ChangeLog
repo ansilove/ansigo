@@ -1,0 +1,12 @@
+AngiGo 1.01 (2015-05-10)
+
+- 'Set mode' and 'Reset mode' sequences are now skipped
+- Modified the ANSI sequence parser to use switch
+- Documentation update: adding cross compilation instructions
+- Relicensed under the BSD 3-Clause license
+
+
+
+AnsiGo 1.00 (2012-02-19)
+
+- Initial release
