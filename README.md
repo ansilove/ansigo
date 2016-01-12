@@ -6,7 +6,7 @@ AnsiGo is a simple ANSi to PNG converter written in pure Go. It converts files
 containing ANSi sequences (.ANS) into PNG images.
 
 For a multi-format general purposes converter and library, check out Ansilove 
-instead : http://ansilove.sourceforge.net
+instead : http://www.ansilove.org
 
 ## Features
 
