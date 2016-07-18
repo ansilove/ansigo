@@ -3,9 +3,9 @@
 // http://www.github.com/fcambus/ansigo
 //
 // Created:      2012-02-14
-// Last Updated: 2016-01-05
+// Last Updated: 2016-07-18
 //
-// AnsiGo is released under the BSD 3-Clause license.
+// AnsiGo is released under the BSD 2-Clause license.
 // See LICENSE file for details.
 package main
 
