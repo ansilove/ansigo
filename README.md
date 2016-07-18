@@ -26,7 +26,7 @@ Alternatively, you can easily cross-compile binaries for other systems. See the 
 ## Usage
 
 AnsiGo takes the input file as parameter :
-	
+
 	ansigo inputfile
 
 ## Cross-compiling AnsiGo binaries
@@ -49,7 +49,7 @@ Building Windows binaries :
 
 ## License
 
-AnsiGo is released under the BSD 3-Clause license. See `LICENSE` file for details.
+AnsiGo is released under the BSD 2-Clause license. See `LICENSE` file for details.
 
 ## Author
 
