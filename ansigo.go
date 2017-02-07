@@ -81,7 +81,7 @@ func main() {
 			break
 		}
 
-		// ANSI Sequence : ESC (Escape) + [
+		// ANSI Sequence: ESC (Escape) + [
 		if ansi.character == '\x1b' && data[i+1] == '[' {
 			ansiSequence := []byte{}
 
