@@ -5,8 +5,8 @@
 AnsiGo is a simple ANSi to PNG converter written in pure Go. It converts files
 containing ANSi sequences (.ANS) into PNG images.
 
-For a multi-format general purposes converter and library, check out Ansilove 
-instead : http://www.ansilove.org
+For a multi-format general purposes converter and library, check out Ansilove
+instead: https://www.ansilove.org
 
 ## Features
 
@@ -55,11 +55,11 @@ AnsiGo is released under the BSD 2-Clause license. See `LICENSE` file for detail
 
 AnsiGo is developed by Frederic Cambus.
 
-- Site : http://www.cambus.net
-- Twitter: http://twitter.com/fcambus
+- Site: https://www.cambus.net
+- Twitter: https://twitter.com/fcambus
 
 ## Resources
 
 Project Homepage: http://fcambus.github.io/ansigo/
 
-Sister project : http://www.ascii-codes.com
+Sister project: https://www.ascii-codes.com
