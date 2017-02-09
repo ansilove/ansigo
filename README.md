@@ -59,6 +59,6 @@ AnsiGo is developed by Frederic Cambus.
 
 ## Resources
 
-Project Homepage: http://fcambus.github.io/ansigo/
+GitHub: https://github.com/fcambus/ansigo
 
 Sister project: https://www.ascii-codes.com
