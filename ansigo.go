@@ -263,7 +263,7 @@ func main() {
 	// Create Output File
 	outputFile, err := os.Create(output)
 	if err != nil {
-		fmt.Println("ERROR: Can't create ouput file.")
+		fmt.Println("ERROR: Can't create output file.")
 		os.Exit(1)
 	}
 
