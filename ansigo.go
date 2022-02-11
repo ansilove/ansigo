@@ -12,6 +12,7 @@ package main
 import (
 	"fmt"
 	"image"
+	"image/color"
 	"image/draw"
 	"image/png"
 	"io/ioutil"
@@ -198,6 +199,12 @@ func main() {
 
 						case 5:
 							ansi.colorBackground += 8
+
+						case 7:
+							var tmp color.RGBA
+							tmp = ansi.palette[ansi.colorBackground]
+							ansi.palette[ansi.colorBackground] = ansi.palette[ansi.colorForeground]
+							ansi.palette[ansi.colorForeground] = tmp
 
 						case 30, 31, 32, 33, 34, 35, 36, 37:
 							ansi.colorForeground = valueColor - 30
