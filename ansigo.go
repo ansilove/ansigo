@@ -198,7 +198,11 @@ func main() {
 
 						case 5:
 							ansi.colorBackground += 8
-
+						case 39:
+							ansi.colorForeground = 7
+							ansi.bold = false
+						case 49:
+							ansi.colorBackground = 0
 						case 30, 31, 32, 33, 34, 35, 36, 37:
 							ansi.colorForeground = valueColor - 30
 							if ansi.bold {
