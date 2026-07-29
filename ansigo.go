@@ -3,7 +3,7 @@
 // https://github.com/ansilove/ansigo
 //
 // Created:      2012-02-14
-// Last Updated: 2026-07-29
+// Last Updated: 2026-07-30
 //
 // AnsiGo is released under the BSD 2-Clause license.
 // See LICENSE file for details.
@@ -191,6 +191,7 @@ func main() {
 							ansi.colorBackground = 0
 							ansi.colorForeground = 7
 							ansi.bold = false
+							ansi.invert = false
 
 						case 1:
 							ansi.colorForeground += 8
@@ -198,6 +199,12 @@ func main() {
 
 						case 5:
 							ansi.colorBackground += 8
+
+						case 7:
+							ansi.invert = true
+
+						case 27:
+							ansi.invert = false
 
 						case 30, 31, 32, 33, 34, 35, 36, 37:
 							ansi.colorForeground = valueColor - 30
@@ -229,8 +236,16 @@ func main() {
 				ansi.sizeY = ansi.positionY
 			}
 
+			background := ansi.colorBackground
+			foreground := ansi.colorForeground
+
+			if ansi.invert {
+				background = ansi.colorForeground % 8
+				foreground = ansi.colorBackground + (ansi.colorForeground & 8)
+			}
+
 			// Write Current Character Info In A Temporary Array
-			ansi.buffer = append(ansi.buffer, Character{ansi.colorBackground, ansi.colorForeground, ansi.positionX, ansi.positionY, ansi.character})
+			ansi.buffer = append(ansi.buffer, Character{background, foreground, ansi.positionX, ansi.positionY, ansi.character})
 
 			ansi.positionX++
 		}

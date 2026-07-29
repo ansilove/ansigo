@@ -3,7 +3,7 @@
 // https://github.com/ansilove/ansigo
 //
 // Created:      2012-02-14
-// Last Updated: 2026-07-29
+// Last Updated: 2026-07-30
 //
 // AnsiGo is released under the BSD 2-Clause license.
 // See LICENSE file for details.
@@ -25,6 +25,7 @@ type Ansi struct {
 	colorBackground, colorForeground, positionX, positionY, savedPositionX, savedPositionY, sizeX, sizeY int
 	character byte
 	bold bool
+	invert bool
 }
 
 // Initialize IBM PC 80x25 font data
