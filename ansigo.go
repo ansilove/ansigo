@@ -1,6 +1,6 @@
 // AnsiGo 1.01
 // Copyright (c) 2012-2026, Frederic Cambus
-// https://github.com/fcambus/ansigo
+// https://github.com/ansilove/ansigo
 //
 // Created:      2012-02-14
 // Last Updated: 2026-07-29
