@@ -16,10 +16,16 @@ instead: https://www.ansilove.org
 
 ## Installation
 
-Build and install with the `go` tool:
+AnsiGo requires Go 1.11 or later.
 
-	go build ansigo
-	go install ansigo
+Build AnsiGo from the repository root:
+
+	go build
+
+This creates the `ansigo` executable in the current directory. To install it
+in your Go binary directory:
+
+	go install
 
 Alternatively, you can easily cross-compile binaries for other systems. See the `Cross-compiling AnsiGo binaries` section for instructions.
 
