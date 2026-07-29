@@ -37,21 +37,18 @@ AnsiGo takes the input file as parameter:
 
 ## Cross-compiling AnsiGo binaries
 
-Building Go for the required platform:
-
-	cd /usr/local/go/
-	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 ./make.bash
-	CGO_ENABLED=0 GOOS=windows GOARCH=amd64 ./make.bash
+Go can cross-compile pure Go programs directly. Run the following commands from
+the repository root.
 
 Building Linux binaries:
 
-	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o linux/amd64/ansigo ansigo
-	CGO_ENABLED=0 GOOS=linux GOARCH=386 go build -o linux/i386/ansigo ansigo
+	GOOS=linux GOARCH=amd64 go build -o ansigo-linux-amd64
+	GOOS=linux GOARCH=386 go build -o ansigo-linux-386
 
 Building Windows binaries:
 
-	CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -o windows/amd64/ansigo.exe ansigo
-	CGO_ENABLED=0 GOOS=windows GOARCH=386 go build -o windows/i386/ansigo.exe ansigo
+	GOOS=windows GOARCH=amd64 go build -o ansigo-windows-amd64.exe
+	GOOS=windows GOARCH=386 go build -o ansigo-windows-386.exe
 
 ## License
 
